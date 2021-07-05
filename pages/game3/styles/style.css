@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #000;
+    margin-top: 30px;
+    text-align: center;
+}
+.field {
+    display: inline-block;
+    background: #fff;
+}
+.field__row {
+    display: flex;
+}
+.field span {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #000000;
+}
+@media (max-width: 800px) {
+    .field span {
+        width: 20px;
+        height: 20px;
+    }
+}
+.field span._0 {
+    background: #000;
+}
+.field span._1 {
+    background: #444;
+}
+.field span._2 {
+    background: #fff;
+}
+.field span._3 {
+    background: #fff;
+}
+.field span._3:after {
+    content: '';
+    position: relative;
+    left: 11.6666666667px;
+    top: 11.6666666667px;
+    display: block;
+    width: 11.6666666667px;
+    height: 11.6666666667px;
+    background: #000;
+    border-radius: 50%;
+}
+@media (max-width: 800px) {
+    .field span._3:after {
+        left: 6.6666666667px;
+        top: 6.6666666667px;
+        width: 6.6666666667px;
+        height: 6.6666666667px;
+    }
+}
+.field span._4 {
+    background: linear-gradient(to right, #e3a86d 30%, #c77524 0);
+    background-size: 10px 100%;
+}
+.field span._4._checked {
+    background: linear-gradient(to right, #b85d43 30%, #6e3727 0);
+    background-size: 10px 100%;
+}
+.field span._5 {
+    background: green;
+    border-radius: 50%;
+    border: none;
+}
+.field span._5:before, .field span._5:after {
+    content: '';
+    position: absolute;
+    top: 8.75px;
+    display: block;
+    width: 3.8888888889px;
+    height: 3.8888888889px;
+    background: #000000;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    box-sizing: padding-box;
+}
+@media (max-width: 800px) {
+    .field span._5:before, .field span._5:after {
+        top: 5px;
+        width: 1.3333333333px;
+        height: 1.3333333333px;
+    }
+}
+.field span._5:before {
+    left: 7px;
+}
+@media (max-width: 800px) {
+    .field span._5:before {
+        left: 4px;
+    }
+}
+.field span._5:after {
+    right: 7px;
+}
+@media (max-width: 800px) {
+    .field span._5:after {
+        right: 4px;
+    }
+}
+.win {
+    padding: 15px;
+    font-size: 24px;
+}
+.restart {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    padding: 3px 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.mobileButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+.mobileButtons__container {
+    position: relative;
+    display: flex;
+    color: #fff;
+    font-size: 40px;
+}
+.mobileButtons__text {
+    color: #ffffff;
+    margin-top: 20px;
+}
+.mobileButtons__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.1s linear;
+}
+.mobileButtons__button:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+.mobileButtons__button-top {
+    position: absolute;
+    top: -48px;
+    left: 48px;
+}
