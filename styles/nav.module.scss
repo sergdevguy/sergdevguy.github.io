@@ -1,0 +1,16 @@
+$navBackground: #ffcccc;
+
+.nav {
+    &__container {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        background: $navBackground;
+    }
+
+    &__li {
+        &:not(:first-child) {
+            margin-left: 30px;   
+        }
+    }
+}
