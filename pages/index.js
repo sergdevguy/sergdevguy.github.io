@@ -12,7 +12,7 @@ export default function Home() {
         <h1>Привет</h1>
         <div>
           <div>
-            <Link href="/posts/first-post">
+            <Link href="/somethingElse">
               <a>Что-нибудь</a>
             </Link>
           </div>
