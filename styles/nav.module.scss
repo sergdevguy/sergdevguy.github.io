@@ -1,4 +1,5 @@
-$navBackground: #ffcccc;
+$navBackground: #64109b;
+$navLinksColor: #10ffa3;
 
 .nav {
     &__container {
@@ -11,6 +12,10 @@ $navBackground: #ffcccc;
     &__li {
         &:not(:first-child) {
             margin-left: 30px;   
+        }
+
+        a {
+            color: $navLinksColor;
         }
     }
 }
