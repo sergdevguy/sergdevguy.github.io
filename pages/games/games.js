@@ -8,7 +8,12 @@ export default function GamesPage() {
             <Head>
                 <title>Игрули</title>
             </Head>
-            <h1>Заголовок</h1>
+            <h1>Игрули</h1>
+            <div>
+                <Link href="/games/game1/game1">
+                    <a>Мемори</a>
+                </Link>
+            </div>
             <h2>
                 <Link href="/">
                     <a>Back to home</a>
