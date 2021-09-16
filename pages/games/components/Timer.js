@@ -3,26 +3,24 @@ import useInterval from '../components/UseInterval';
 
 export default function Timer(props) {
     const [time, setTime] = useState('00:00:00');
+    const getTime = props.getTime;
     const defaultTimerSpeed = 10;
     let timerSpeed = null;
-    const updateTimerTime = props.updateTimerTime;
-    let test = props.timerCondition;
 
-    switch (props.timerCondition) {
-        case 'start':
-            timerSpeed = defaultTimerSpeed;
-            break;
-        case 'stop':
-            timerSpeed = null;
-            break;
-        case 'getTime':
-            // updateTimerTime(time);
-            break;
-    }
-
-    if (test === "getTime") {
-        updateTimerTime(time);
-    }
+    useEffect(() => {
+        switch (props.timerCondition) {
+            case 'start':
+                timerSpeed = defaultTimerSpeed;
+                console.log(timerSpeed);
+                break;
+            case 'stop':
+                timerSpeed = null;
+                break;
+            case 'getTime':
+                getTime(123);
+                break;
+        }
+    });
 
     useInterval(() => {
         setTime(updateTime());
@@ -65,11 +63,6 @@ export default function Timer(props) {
                     <span>{time}</span>
                 </div>
             </div>
-            <button onClick={() => {
-                updateTimerTime(time);
-            }}>
-                Child Get timer time
-            </button>
         </>
     )
 
