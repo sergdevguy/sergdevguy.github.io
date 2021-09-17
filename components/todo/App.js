@@ -108,13 +108,16 @@ function AppRefactoring() {
                 setActiveList={setActiveList}
             />
             {
-                tasks.length &&
+                tasks.length
+                    ?
                     <Tasks
                         addTaskList={addTaskList}
                         activeTaskList={activeTaskList}
                         addStatus={addStatus}
                         removeIfTrash={removeIfTrash}
                     />
+                    :
+                    ''
             }
         </div>
     )
