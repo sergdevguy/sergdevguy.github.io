@@ -9,7 +9,7 @@ export default function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Todo app with love <3"
         />
       </Head>
       {/* <nav>
