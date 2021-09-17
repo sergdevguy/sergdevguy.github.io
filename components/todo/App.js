@@ -6,6 +6,7 @@ import s from './App.module.scss';
 function AppRefactoring() {
     const [tasks, setTasks] = useState([]);
     const [activeTaskList, setActiveTaskList] = useState([]);
+    const [unknown, setUnknown] = useState(false);
 
     useEffect(() => {
         setTasks(JSON.parse(localStorage.getItem("todo")) || []);
@@ -15,6 +16,13 @@ function AppRefactoring() {
         localStorage.setItem('todo', JSON.stringify(tasks));
         filterActiveTask(tasks);
     }, [tasks]);
+
+    useEffect(() => {
+        if (!localStorage.getItem('unknown')) {
+            setUnknown(true);
+            localStorage.setItem('unknown', 'false');
+        }
+    }, []);
 
     // sidebar
     const addTask = (task) => {
@@ -101,6 +109,18 @@ function AppRefactoring() {
 
     return (
         <div className={s["todo"] + ' ' + 'todo-colors'}>
+            {
+                unknown &&
+                <div className={s["todo__instruction"]}>
+                    <div className={s["todo__instruction-container"]}>
+                        <div className={s["_text"]}>Привет.</div>
+                        <div className={s["_text"]}>Это задачник, который я сделал с любовью.</div>
+                        <div className={s["_text"]}>Всё что ты напишешь в нём, останется в браузере твоего устройства и будет доступно только тебе и только на этом устройстве.</div>
+                        <div className={s["_text"]}>! Всё удалится, если почистить кэш браузера.</div>
+                        <button className="button" onClick={() => setUnknown(false)}>Понятно</button>
+                    </div>
+                </div>
+            }
             <Sidebar
                 tasks={tasks}
                 addTask={addTask}
