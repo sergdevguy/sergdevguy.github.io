@@ -14,6 +14,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: none;
 }
 
 a {
@@ -40,4 +41,29 @@ h1 {
   text-align: center;
   color: #fec201;
   text-shadow: red 1px 3px;
+}
+
+.button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: .2s linear;
+}
+
+.button:hover {
+  background: darken(#ffffff, 8%);
+}
+
+.input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+.todo-colors * {
+  color: #000000;
+  font-size: 14px;
 }

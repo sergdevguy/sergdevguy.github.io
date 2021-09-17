@@ -14,6 +14,11 @@ export default function Home() {
               <a>Игрули</a>
             </Link>
           </div>
+          <div>
+            <Link href="/todo">
+              <a>Todo app</a>
+            </Link>
+          </div>
         </div>
       </section>
     </Layout>

@@ -1,0 +1,110 @@
+$inputColorWidth: 30px;
+
+.button {
+    &__add {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__screen-hider {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, .8);
+        z-index: 2;
+    }
+
+    &__popup {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        max-width: calc(100% - 50px);
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 10px;
+        border-radius: 5px;
+        background: lightgrey;
+        z-index: 2;
+
+        &-item {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &._error {
+                &::placeholder {
+                    color: red;
+                }
+            }
+
+            label {
+                display: block;
+                position: relative;
+                width: $inputColorWidth;
+                height: $inputColorWidth;
+                margin-left: 10px;
+                cursor: pointer;
+                overflow: hidden;
+            }
+
+            input[type="color"] {
+                -webkit-appearance: none;
+                border: none;
+                background: #fff;
+                width: $inputColorWidth;
+                height: $inputColorWidth;
+                border-radius: 5px;
+                overflow: hidden;
+                outline: none;
+                cursor: inherit;
+            }
+
+            /* -webkit */
+            input[type="color"]::-webkit-color-swatch-wrapper {
+                padding: 0;
+            }
+
+            input[type="color"]::-webkit-color-swatch {
+                border: none;
+                border-radius: 5px;
+            }
+
+            /* firefox */
+            input[type="color"]::-moz-focus-inner {
+                border: none;
+                padding: 0;
+                border-radius: 5px;
+            }
+
+            input[type="color"]::-moz-color-swatch {
+                border: none;
+                border-radius: 5px;
+                height: $inputColorWidth;
+            }
+        }
+
+        &-close {
+            position: absolute;
+            right: -8px;
+            top: -8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: lightgrey;
+            cursor: pointer;
+        }
+    }
+}

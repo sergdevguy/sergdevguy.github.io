@@ -12,7 +12,7 @@ export default function Layout({ children }) {
           content="Learn how to build a personal website using Next.js"
         />
       </Head>
-      <nav>
+      {/* <nav>
         <ul className={navS.nav__container}>
           <li className={navS.nav__li}>
             <Link href="/">
@@ -25,7 +25,7 @@ export default function Layout({ children }) {
             </Link>
           </li>
         </ul>
-      </nav>
+      </nav> */}
       <main>{children}</main>
     </div>
   )

@@ -1,0 +1,10 @@
+.sidebar {
+    padding: 10px;
+    padding-bottom: 20px;
+    background: rgba(gray, .2);
+    border-radius: 5px 5px 0 0;
+
+    &__button {
+        margin-top: 20px;
+    }
+}
