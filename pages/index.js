@@ -10,7 +10,7 @@ export default function Home() {
         <h1>Привет.<br/> Здесь всякое можно потыкать, посмотреть</h1>
         <div>
           <div>
-            <Link href="/games/games">
+            <Link href="/games">
               <a>Игрули</a>
             </Link>
           </div>

@@ -14,6 +14,11 @@ export default function GamesPage() {
                     <a>Мемори</a>
                 </Link>
             </div>
+            <div>
+                <Link href="/games/boxmen">
+                    <a>Boxmen</a>
+                </Link>
+            </div>
             <h2>
                 <Link href="/">
                     <a>Back to home</a>

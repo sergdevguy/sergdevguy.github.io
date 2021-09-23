@@ -1,0 +1,247 @@
+$box-size: 40px;
+$box-size-mobile: 30px;
+
+$color-walls: #4b6154;
+$color-floor: #c0dfc2;
+$color-hero: #a81e29;
+$color-box-1: #8d693a;
+$color-box-2: #50331b;
+
+.game {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+
+    &-row {
+        display: flex;
+        background: #99998f;
+    }
+
+    &-box {
+        position: relative;
+        width: $box-size;
+        height: $box-size;
+        background: gray;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+
+        @media (max-width: 800px) {
+            width: $box-size-mobile;
+            height: $box-size-mobile;
+        }
+
+        &._0 {
+            background: #000;
+        }
+        &._1 {
+            background: $color-walls;
+        }
+        &._2 {
+            background: #99998f;
+        }
+        &._3 {
+            background: #99998f;
+
+            &:after {
+                content: "";
+                position: relative;
+                left: $box-size / 3;
+                top: $box-size / 3;
+                display: block;
+                width: $box-size / 3;
+                height: $box-size / 3;
+                background: #000;
+                border-radius: 50%;
+
+                @media (max-width: 800px) {
+                    left: $box-size-mobile / 3;
+                    top: $box-size-mobile / 3;
+
+                    width: $box-size-mobile / 3;
+                    height: $box-size-mobile / 3;
+                }
+            }
+        }
+        &._4 {
+            background: linear-gradient(to right, $color-box-1 50%, $color-box-2 0);
+            background-size: 10px 100%;
+
+            &._checked {
+                background: linear-gradient(to right, #b85d43 30%, #6e3727 0);
+                background-size: 10px 100%;
+            }
+        }
+        &._5 {
+            background: $color-hero;
+            border-radius: 50%;
+            border: none;
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                top: $box-size / 4;
+                display: block;
+                width: $box-size / 9;
+                height: $box-size / 9;
+                background: #000000;
+                border-radius: 50%;
+                border: 3px solid #ffffff;
+                box-sizing: padding-box;
+                transition: transform 0.5s ease;
+                animation: eyes 4s linear infinite;
+
+                @media (max-width: 800px) {
+                    top: $box-size-mobile / 4;
+
+                    width: $box-size-mobile / 10;
+                    height: $box-size-mobile / 10;
+                }
+
+                @keyframes eyes {
+                    0% {
+                        transform: scaleY(1);
+                    }
+                    15% {
+                        transform: scaleY(1);
+                    }
+                    19% {
+                        transform: scaleY(0);
+                    }
+                    23% {
+                        transform: scaleY(1);
+                    }
+                    100% {
+                        transform: scaleY(1);
+                    }
+                }
+            }
+
+            &:before {
+                left: $box-size / 5;
+
+                @media (max-width: 800px) {
+                    left: $box-size-mobile / 5;
+                }
+            }
+
+            &:after {
+                right: $box-size / 5;
+
+                @media (max-width: 800px) {
+                    right: $box-size-mobile / 5;
+                }
+            }
+        }
+    }
+
+    &__restart {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        border: none;
+        outline: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        background: gray;
+        border-radius: 5px;
+    }
+
+    &__win {
+        position: fixed;
+        width: 400px;
+        max-width: calc(100% - 40px);
+        animation: show 0.5s linear;
+        z-index: 5;
+
+        &-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        &-text {
+            position: relative;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 5px;
+            background: #ffffff;
+            font-size: 26px;
+            text-align: center;
+            z-index: 1;
+        }
+
+        &-button {
+            margin-top: 30px;
+            border: 1px solid gray;
+            outline: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        @keyframes show {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__mobile {
+        position: relative;
+        display: flex;
+        margin-top: 80px;
+
+        &-button {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid gray;
+            border-radius: 5px;
+
+            &:hover {
+                background: rgba(255,255,255,.2);
+            }
+
+            svg {
+                width: 60px;
+                height: 60px;
+
+                path {
+                    fill: gray;
+                }
+            }
+
+            &._right {
+                margin-left: 70px;
+                transform: rotate(180deg);
+            }
+
+            &._top {
+                position: absolute;
+                top: -60px;
+                left: 50%;
+                transform: rotate(90deg) translateY(50%);
+            }
+
+            &._bottom {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: rotate(-90deg) translateY(-50%);
+            }
+        }
+    }
+}
