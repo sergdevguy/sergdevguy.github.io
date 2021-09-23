@@ -142,14 +142,22 @@ $color-box-2: #50331b;
 
     &__restart {
         position: absolute;
-        top: 5px;
-        right: 5px;
+        top: 15px;
+        right: 50%;
+        transform: translateX(50%);
         border: none;
         outline: none;
         padding: 5px 10px;
         cursor: pointer;
         background: gray;
         border-radius: 5px;
+
+        @media (max-width: 800px) {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            transform: none;
+        }
     }
 
     &__win {
@@ -213,7 +221,7 @@ $color-box-2: #50331b;
             border-radius: 5px;
 
             &:hover {
-                background: rgba(255,255,255,.2);
+                background: rgba(255, 255, 255, 0.2);
             }
 
             svg {
