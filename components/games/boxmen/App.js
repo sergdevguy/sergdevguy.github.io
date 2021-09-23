@@ -168,7 +168,7 @@ function App() {
         <div onClick={() => checkKey('ArrowLeft')} className={s["game__mobile-button"] + ' ' + s["_left"]}>{ArrowIcon}</div>
         <div onClick={() => checkKey('ArrowRight')} className={s["game__mobile-button"] + ' ' + s["_right"]}>{ArrowIcon}</div>
       </div>
-      <div style={{ fontSize: '12px', marginTop: '10px', color: 'gray' }}>Можно тыкать сюда или на стрелочках клавиатуры</div>
+      <div style={{ fontSize: '12px', marginTop: '10px', color: 'gray', userSelect: 'none' }}>Можно тыкать сюда или на стрелочках клавиатуры</div>
       {winStatus &&
         <div className={s["game__win"]}>
           <div className={s["game__win-wrapper"]}></div>
