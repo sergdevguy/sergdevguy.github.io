@@ -2,11 +2,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Roboto;
   line-height: 1.6;
   font-size: 18px;
-  background: #000000;
   color: #ffffff;
 }
 
@@ -33,14 +31,6 @@ img {
 
 li {
   list-style: none;
-}
-
-h1 {
-  padding: 20px;
-  font-size: 40px;
-  text-align: center;
-  color: #fec201;
-  text-shadow: red 1px 3px;
 }
 
 .button {

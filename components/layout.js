@@ -1,32 +1,26 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import navS from '../styles/nav.module.scss'
+// Next.js
+import Head from 'next/head';
+import Nav from './nav/Nav';
+// MUI
+import Container from '@material-ui/core/Container';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Box from '@material-ui/core/Box';
 
 export default function Layout({ children }) {
   return (
-    <div>
+    <Box sx={{ minHeight: '100vh' }}>
+      <CssBaseline />
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Todo app with love <3"
-        />
       </Head>
-      {/* <nav>
-        <ul className={navS.nav__container}>
-          <li className={navS.nav__li}>
-            <Link href="/">
-              <a>Главная</a>
-            </Link>
-          </li>
-          <li className={navS.nav__li}>
-            <Link href="/games/games">
-              <a>Игрули</a>
-            </Link>
-          </li>
-        </ul>
-      </nav> */}
-      <main>{children}</main>
-    </div>
+      <Box sx={{ bgcolor: 'primary.dark' }}>
+        <Container maxWidth="lg">
+          <Nav />
+        </Container>
+      </Box>
+      <Container maxWidth="lg" color="primary">
+        {children}
+      </Container>
+    </Box>
   )
 }

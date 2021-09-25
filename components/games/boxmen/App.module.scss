@@ -13,9 +13,8 @@ $color-box-2: #50331b;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    height: 100vh;
     background: #000;
+    padding: 50px 0;
 
     &-row {
         display: flex;
@@ -87,8 +86,8 @@ $color-box-2: #50331b;
                 position: absolute;
                 top: $box-size / 4;
                 display: block;
-                width: $box-size / 9;
-                height: $box-size / 9;
+                width: $box-size / 4;
+                height: $box-size / 4;
                 background: #000000;
                 border-radius: 50%;
                 border: 3px solid #ffffff;
@@ -99,8 +98,8 @@ $color-box-2: #50331b;
                 @media (max-width: 800px) {
                     top: $box-size-mobile / 4;
 
-                    width: $box-size-mobile / 10;
-                    height: $box-size-mobile / 10;
+                    width: $box-size-mobile / 4;
+                    height: $box-size-mobile / 4;
                 }
 
                 @keyframes eyes {
