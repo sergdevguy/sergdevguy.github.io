@@ -13,6 +13,11 @@ export default function GamesPage() {
                     <a>Boxmen</a>
                 </Link>
             </div>
+            <div>
+                <Link href="/games/snake">
+                    <a>Змейка</a>
+                </Link>
+            </div>
         </Layout>
     )
 }
