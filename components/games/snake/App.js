@@ -181,7 +181,7 @@ function App() {
     const timer = setInterval(() => {
       dispatch({ type: 'moveSnake' });
       dispatch({ type: 'drawField' });
-    }, 500);
+    }, 6500);
     return () => clearInterval(timer);
   }, [state.win]);
 

@@ -35,7 +35,7 @@ $blocks-size: 25px;
 
         &._0 {
             background: $field-color;
-            box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2), 1px 1px 5px rgba(255, 255, 255, .5);
+            box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2), 1px 1px 5px rgba(255, 255, 255, 0.5);
         }
 
         &._1 {
@@ -52,7 +52,7 @@ $blocks-size: 25px;
 
             @keyframes food {
                 0% {
-                  transform: scale(1);
+                    transform: scale(1);
                 }
                 50% {
                     transform: scale(1.1);
@@ -60,7 +60,7 @@ $blocks-size: 25px;
                 100% {
                     transform: scale(1);
                 }
-              }
+            }
         }
     }
 
@@ -126,7 +126,7 @@ $blocks-size: 25px;
         border: 1px solid #ffffff;
         border-radius: 2px;
         font-size: 25px;
-        opacity: .7;
+        opacity: 0.7;
         cursor: pointer;
         user-select: none;
 
