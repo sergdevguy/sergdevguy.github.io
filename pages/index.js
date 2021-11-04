@@ -2,8 +2,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 // Project
 import Layout from '../components/layout';
-import LayoutContainerWrapper from '../components/layoutContainerWrapper';
-import SwiperSection from '../components/main-page/SwiperSection/SwiperSection';
 // MUI
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
@@ -21,24 +19,34 @@ export default function Home() {
         />
       </Head>
       <Container maxWidth="lg">
-        <Typography variant="h4" component="h1" color="primary" textAlign="center" m={{ margin: 20 }}>
-          Привет.<br /> Это мой сайт.
+        <Typography variant="h5" component="h1" color="primary" textAlign="center" m={{ margin: 20 }}>
+          Привет.<br /> Сюда складываю всякое, сделанное на React.
         </Typography>
-        <Typography component="p" color="primary" textAlign="center" fontSize="10px" m={{ margin: 20 }}>
-          Он выглядит плохо не просто так. Собран на Next.js и MUI. Изучаю новые технологии :)
+        <Typography component="p" color="primary" textAlign="center" fontSize="10px">
+          (Выглядит не очень, но как говорится "Я не бегун, я бодибилдер" (с) - Я не дизайнер, лучше лишний раз попрогаю)
+        </Typography>
+        <Typography component="p" color="primary" textAlign="center" fontSize="10px">
+          (Хотя.. попозже поправлю дизайн)
         </Typography>
         <Grid container spacing={2} mt={8}>
           <Grid item xs={6} md={3}>
-            <Paper elevation={3} sx={{ padding: '15px 25px' }}>
+            <Paper elevation={3}>
               <Link href="/todo">
-                <a>Задачник</a>
+                <a style={{display: 'block', padding: '15px 25px'}}>Задачник</a>
               </Link>
             </Paper>
           </Grid>
           <Grid item xs={6} md={3}>
-            <Paper elevation={3} sx={{ padding: '15px 25px' }}>
+            <Paper elevation={3}>
               <Link href="/games">
-                <a>Игрули</a>
+                <a style={{display: 'block', padding: '15px 25px'}}>Игрули</a>
+              </Link>
+            </Paper>
+          </Grid>
+          <Grid item xs={6} md={3}>
+            <Paper elevation={3}>
+              <Link href="/programs">
+                <a style={{display: 'block', padding: '15px 25px'}}>Проги всякие</a>
               </Link>
             </Paper>
           </Grid>

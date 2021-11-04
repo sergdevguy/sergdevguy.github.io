@@ -31,6 +31,13 @@ export default function Nav() {
                         </ListItemButton>
                     </Link>
                 </ListItem>
+                <ListItem disablePadding style={{ width: 'auto' }}>
+                    <Link href="/programs" passHref>
+                        <ListItemButton>
+                            <ListItemText align="center">Программы</ListItemText>
+                        </ListItemButton>
+                    </Link>
+                </ListItem>
             </List>
         </nav>
     )
