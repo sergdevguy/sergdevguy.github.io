@@ -1,8 +1,11 @@
 import Head from 'next/head'
 import Link from 'next/link'
 // Project
-import Layout from '../components/layout'
+import Layout from '../components/layout';
+import LayoutContainerWrapper from '../components/layoutContainerWrapper';
+import SwiperSection from '../components/main-page/SwiperSection/SwiperSection';
 // MUI
+import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
@@ -17,7 +20,7 @@ export default function Home() {
           content="Собрал всякое новое, интересное (не очень)"
         />
       </Head>
-      <section>
+      <Container maxWidth="lg">
         <Typography variant="h4" component="h1" color="primary" textAlign="center" m={{ margin: 20 }}>
           Привет.<br /> Это мой сайт.
         </Typography>
@@ -40,7 +43,7 @@ export default function Home() {
             </Paper>
           </Grid>
         </Grid>
-      </section>
+      </Container>
     </Layout>
   )
 }

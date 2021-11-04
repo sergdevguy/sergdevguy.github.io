@@ -18,9 +18,9 @@ export default function Layout({ children }) {
           <Nav />
         </Container>
       </Box>
-      <Container maxWidth="lg" color="primary">
+      <div>
         {children}
-      </Container>
+      </div>
     </Box>
   )
 }
