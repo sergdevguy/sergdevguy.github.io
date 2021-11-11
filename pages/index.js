@@ -32,21 +32,21 @@ export default function Home() {
           <Grid item xs={6} md={3}>
             <Paper elevation={3}>
               <Link href="/todo">
-                <a style={{display: 'block', padding: '15px 25px'}}>Задачник</a>
+                <a style={{ display: 'block', padding: '15px 25px' }}>Задачник</a>
               </Link>
             </Paper>
           </Grid>
           <Grid item xs={6} md={3}>
             <Paper elevation={3}>
               <Link href="/games">
-                <a style={{display: 'block', padding: '15px 25px'}}>Игрули</a>
+                <a style={{ display: 'block', padding: '15px 25px' }}>Игрули</a>
               </Link>
             </Paper>
           </Grid>
           <Grid item xs={6} md={3}>
             <Paper elevation={3}>
               <Link href="/programs">
-                <a style={{display: 'block', padding: '15px 25px'}}>Проги всякие</a>
+                <a style={{ display: 'block', padding: '15px 25px' }}>Проги всякие</a>
               </Link>
             </Paper>
           </Grid>
