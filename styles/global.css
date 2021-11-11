@@ -1,38 +1,4 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: Roboto;
-  line-height: 1.6;
-  font-size: 18px;
-  color: #ffffff;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  outline: none;
-}
-
-a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-li {
-  list-style: none;
-}
-
+/* this styles for todo app, because it`s fail */
 .button {
   padding: 10px;
   border: none;
@@ -56,6 +22,7 @@ li {
 .todo-colors * {
   color: #000000;
   font-size: 14px;
+  outline: none;
 }
 
 .links-container {
