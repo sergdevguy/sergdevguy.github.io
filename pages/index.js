@@ -1,16 +1,12 @@
-import Head from 'next/head'
-import Link from 'next/link'
-// Project
-import Layout from '../components/layout';
-// MUI
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
+import Head from 'next/head';
+// components
+import CardsSection from '../components/main-page/CardsSection';
+// bootstrap
+import { Container, Row, Col } from 'react-bootstrap';
 
 export default function Home() {
   return (
-    <Layout>
+    <>
       <Head>
         <title>Главная</title>
         <meta
@@ -18,40 +14,25 @@ export default function Home() {
           content="Собрал всякое новое, интересное (не очень)"
         />
       </Head>
-      <Container maxWidth="lg">
-        <Typography variant="h5" component="h1" color="primary" textAlign="center" m={{ margin: 20 }}>
-          Привет.<br /> Сюда складываю всякое, сделанное на React.
-        </Typography>
-        <Typography component="p" color="primary" textAlign="center" fontSize="10px">
-          (Выглядит не очень, но как говорится "Я не бегун, я бодибилдер" (с) - Я не дизайнер, лучше лишний раз попрогаю)
-        </Typography>
-        <Typography component="p" color="primary" textAlign="center" fontSize="10px">
-          (Хотя.. попозже поправлю дизайн)
-        </Typography>
-        <Grid container spacing={2} mt={8}>
-          <Grid item xs={6} md={3}>
-            <Paper elevation={3}>
-              <Link href="/todo">
-                <a style={{ display: 'block', padding: '15px 25px' }}>Задачник</a>
-              </Link>
-            </Paper>
-          </Grid>
-          <Grid item xs={6} md={3}>
-            <Paper elevation={3}>
-              <Link href="/games">
-                <a style={{ display: 'block', padding: '15px 25px' }}>Игрули</a>
-              </Link>
-            </Paper>
-          </Grid>
-          <Grid item xs={6} md={3}>
-            <Paper elevation={3}>
-              <Link href="/programs">
-                <a style={{ display: 'block', padding: '15px 25px' }}>Проги всякие</a>
-              </Link>
-            </Paper>
-          </Grid>
-        </Grid>
+      <Container className="mt-5 mb-5">
+        <Row>
+          <Col>
+            <h1 className="mb-3 fz-30">HELLO</h1>
+            <p>Меня зовут Харченко Сергей.<br />
+              Я Frontend-разработчик.</p>
+            <hr />
+            <p>Это учебный мини-сайт на Next.js.<br />
+              На нём я изучаю Next.js и выкладываю свои творческие React приложения.</p>
+            <hr />
+            <p>Ещё еcть проекты на Vanilla js тут:<br />
+              <a href="https://codepen.io/sergdevguy/pens/public?grid_type=list">Codepen</a> <br />
+              и тут:<br />
+              <a href="https://jsfiddle.net/user/sergdevguy/fiddles">jsfiddle</a>
+            </p>
+          </Col>
+        </Row>
       </Container>
-    </Layout>
+      <CardsSection />
+    </>
   )
 }
