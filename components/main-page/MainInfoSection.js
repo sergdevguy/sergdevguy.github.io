@@ -1,6 +1,8 @@
 import Image from 'next/image';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, ListGroup } from 'react-bootstrap';
 import imgPerson from './assets/person.png';
+import { BsGithub } from 'react-icons/bs';
+import { BsTelegram } from 'react-icons/bs';
 
 export default function MainInfoSection() {
     return (
@@ -24,6 +26,19 @@ export default function MainInfoSection() {
                         тут: <a className="link-info" href="https://codepen.io/sergdevguy/pens/public?grid_type=list" target="_blank">Codepen</a>,
                         &nbsp;и&nbsp;тут: <a className="link-info" href="https://jsfiddle.net/user/sergdevguy/fiddles" target="_blank">JSFiddle</a>
                     </p>
+                    <hr />
+                    <ListGroup horizontal>
+                        <a href="https://tlgg.ru/sergdevguy" target="_blank" className="h2">
+                            <ListGroup.Item className="p-2 border-0 d-flex align-items-start">
+                                <BsTelegram className="text-info" />
+                            </ListGroup.Item>
+                        </a>
+                        <a href="https://github.com/sergdevguy" target="_blank" className="h2">
+                            <ListGroup.Item className="p-2 border-0 d-flex align-items-start">
+                                <BsGithub className="text-info" />
+                            </ListGroup.Item>
+                        </a>
+                    </ListGroup>
                 </Col>
                 <Col md={5} className="d-none d-md-block">
                     <Image
