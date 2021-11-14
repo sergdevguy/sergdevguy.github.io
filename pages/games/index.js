@@ -1,25 +1,13 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import Layout from '../../components/layout'
+import LayoutPageList from '../../components/layouts/LayoutPageList';
 
 export default function GamesPage() {
     return (
-        <Layout>
-            <Head>
-                <title>Игрули</title>
-            </Head>
-            <div className="links-container">
-                <div>
-                    <Link href="/games/boxmen">
-                        <a>Boxmen</a>
-                    </Link>
-                </div>
-                <div>
-                    <Link href="/games/snake">
-                        <a>Змейка</a>
-                    </Link>
-                </div>
-            </div>
-        </Layout>
+        <LayoutPageList
+            headTitle="Игры"
+            links={[
+                { link: "/games/boxmen", name: "Boxmen" },
+                { link: "/games/snake", name: "Змейка" },
+            ]}
+        />
     )
 }

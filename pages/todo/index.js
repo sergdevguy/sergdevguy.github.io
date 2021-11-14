@@ -1,16 +1,13 @@
 import Head from 'next/head'
-import Link from 'next/link'
-import Layout from '../../components/layout'
-
 import App from '../../components/todo/App'
 
 export default function GamesPage() {
     return (
-        <Layout>
+        <div className="mt-5 mb-5">
             <Head>
                 <title>Todo</title>
             </Head>
             <App />
-        </Layout>
+        </div>
     )
 }
