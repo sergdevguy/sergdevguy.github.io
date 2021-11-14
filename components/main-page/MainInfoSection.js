@@ -28,7 +28,7 @@ export default function MainInfoSection() {
                     </p>
                     <hr />
                     <ListGroup horizontal>
-                        <a href="https://tlgg.ru/sergdevguy" target="_blank" className="h2">
+                        <a href="tg://resolve?domain=sergdevguy" target="_blank" className="h2">
                             <ListGroup.Item className="p-2 border-0 d-flex align-items-start">
                                 <BsTelegram className="text-info" />
                             </ListGroup.Item>
