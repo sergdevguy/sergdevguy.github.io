@@ -21,8 +21,8 @@ export default function MainInfoSection() {
                     </ul>
                     <hr />
                     <p>Ещё еcть проекты на Vanilla js<br />
-                        тут: <a className="link-info" href="https://codepen.io/sergdevguy/pens/public?grid_type=list">Codepen</a>,
-                        &nbsp;и&nbsp;тут: <a className="link-info" href="https://jsfiddle.net/user/sergdevguy/fiddles">JSFiddle</a>
+                        тут: <a className="link-info" href="https://codepen.io/sergdevguy/pens/public?grid_type=list" target="_blank">Codepen</a>,
+                        &nbsp;и&nbsp;тут: <a className="link-info" href="https://jsfiddle.net/user/sergdevguy/fiddles" target="_blank">JSFiddle</a>
                     </p>
                 </Col>
                 <Col md={5} className="d-none d-md-block">
