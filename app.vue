@@ -39,6 +39,7 @@ fullscreen_btn.addEventListener("click", () => {
 
 <template>
   <div id="example_container">
+    <h1>Hello</h1>
     <button id="fullscreen_button">Fullscreen</button>
     <button id="lock_button">Lock</button>
     <button id="unlock_button">Unlock</button>
