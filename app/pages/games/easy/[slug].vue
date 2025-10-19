@@ -1,6 +1,10 @@
+<script setup lang="ts">
+const basePath = import.meta.env.BASE_URL || '/'
+</script>
+
 <template>
   <div class="game-frame">
-    <iframe :src="`/games/easy/${$route.params.slug}/index.html`" frameborder="0"></iframe>
+    <iframe :src="`${basePath}games/easy/${$route.params.slug}/index.html`" frameborder="0"></iframe>
   </div>
 </template>
 
