@@ -1,0 +1,1 @@
+import{_ as s,c as r,a,o as t}from"#entry";const o={},c={class:"game-frame"};function _(n,e){return t(),r("div",c,[...e[0]||(e[0]=[a("iframe",{src:"https://sergdevguy.github.io/vue-sapper/",frameborder:"0"},null,-1)])])}const f=s(o,[["render",_],["__scopeId","data-v-5059265a"]]);export{f as default};

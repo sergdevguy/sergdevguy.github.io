@@ -1,0 +1,1 @@
+import{_ as n}from"./BHs432En.js";import{_ as s,c as a,a as t,b as r,w as _,o as l,d as c}from"#entry";const d={};function i(m,e){const o=n;return l(),a("div",null,[t("div",null,[e[1]||(e[1]=t("h3",null,"Сапёр",-1)),r(o,{to:"/games/easy/sapper"},{default:_(()=>[...e[0]||(e[0]=[c("Сапёр",-1)])]),_:1})])])}const f=s(d,[["render",i]]);export{f as default};
