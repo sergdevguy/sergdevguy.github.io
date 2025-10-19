@@ -1,10 +1,14 @@
-<script setup lang="ts">
-const basePath = import.meta.env.BASE_URL || '/'
+<script setup>
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+
+const iframeSrc = `/games/easy/${route.params.slug}/index.html`
 </script>
 
 <template>
   <div class="game-frame">
-    <iframe :src="`${basePath}games/easy/${$route.params.slug}/index.html`" frameborder="0"></iframe>
+    <iframe :src="iframeSrc" frameborder="0"></iframe>
   </div>
 </template>
 
