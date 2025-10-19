@@ -1,14 +1,6 @@
-<script setup>
-import { useRoute } from 'vue-router'
-
-const route = useRoute()
-
-const iframeSrc = `./index.html`
-</script>
-
 <template>
   <div class="game-frame">
-    <iframe :src="iframeSrc" frameborder="0"></iframe>
+    <iframe src="https://sergdevguy.github.io/vue-sapper/" frameborder="0"></iframe>
   </div>
 </template>
 
