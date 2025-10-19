@@ -3,7 +3,7 @@ import { useRoute } from 'vue-router'
 
 const route = useRoute()
 
-const iframeSrc = `/games/easy/${route.params.slug}/index.html`
+const iframeSrc = `./index.html`
 </script>
 
 <template>
