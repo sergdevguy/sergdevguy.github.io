@@ -1,4 +1,4 @@
-name: Deploy Nuxt site to GitHub Pages
+name: Deploy Nuxt site to GitHub Pages (deploy branch)
 
 on:
   push:
@@ -6,10 +6,13 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -23,8 +26,10 @@ jobs:
       - name: Build site
         run: npm run build && npm run generate
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to deploy branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .output/public
+          publish_branch: deploy
+          force_orphan: true
