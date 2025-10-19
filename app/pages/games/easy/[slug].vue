@@ -1,6 +1,6 @@
 <template>
   <div class="game-frame">
-    <iframe :src="`/games/easy/${$route.params.slug}/index.html`" frameborder="0"></iframe>
+    <iframe :src="`/games/easy/${$route.params.slug}/index.html`" frameborder="0" sandbox="allow-scripts allow-same-origin"></iframe>
   </div>
 </template>
 
